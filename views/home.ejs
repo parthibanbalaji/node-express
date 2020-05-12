@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Home Page</title> 
+    <link href= "/public/assets/style.css" rel="stylesheet" type="text/css" /> 
+</head> 
+  
+<body> 
+    Inserted Records are<br/> 
+      
+    <ul> 
+        <% 
+        if(records.length == 0) {
+            
+        }else {
+            var count = 0;
+            records.forEach((item)=>{%> 
+                <%count++;%>
+                <p>Record: <%=count%></p>
+                <li> <b>State Name: </b><%=item.state_name%></li>
+                <li> <b>City Name: </b><%=item.city_name%></li>
+                <li> <b>country Name: </b><%=item.country_name%></li>
+                <br>
+                <%});
+        }
+       
+        
+        %> 
+    </ul> 
+</body> 
+  
+</html>
